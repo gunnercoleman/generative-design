@@ -1,5 +1,6 @@
 let incX = 125;
-let stepX = 25;
+let stepX = 15;
+let lineStroke = prompt("Select a line thickness between 1 - 20!");
 
 function setup(){
   createCanvas(400, 400);
@@ -7,9 +8,9 @@ function setup(){
 }
 
 function draw(){
-  strokeWeight(random(5, 20));
+  strokeWeight(lineStroke);
   stroke(0, random(255), 255);
-  line(incX, 0, incX, height);
+  line(incX, 0, random(width), height);
   incX = (incX + stepX) % width; 
 
   // if(incX % 2){
